@@ -26,13 +26,13 @@ class Snake:
             self.segments.append(segment)
 
     # Bewegung der Schlange
-        def move(self):
-            for segment_num in range(len(self.segments) - 1, 0, -1):
-                new_x = self.segments[segment_num - 1].xcor()
-                new_y = self.segments[segment_num - 1].ycor()
-                self.segments[segment_num].goto(new_x, new_y)
+    def move(self):
+        for segment_num in range(len(self.segments) - 1, 0, -1):
+            new_x = self.segments[segment_num - 1].xcor()
+            new_y = self.segments[segment_num - 1].ycor()
+            self.segments[segment_num].goto(new_x, new_y)
     
-            self.segments[0].forward(20)
+        self.segments[0].forward(20)
 
     # Steuerung der Schlange
     def go_up(self):
